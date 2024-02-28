@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+<h:head></h:head>
+<h:body>
+	<b:container fluid="true">
+		<h1>Examen</h1>
+		<b:form>
+			<h:panelGrid columns="1"  style="margin: auto;">
+				<b:inputText id="texto" value="#{accionController.texto}" label="Ingresa un texto"
+					required="true" />
+				<b:message for="@previous" />
+	
+				<b:commandButton update="@form" value="Enviar" look="primary"
+					action="#{accionController.accionBoton}" large-screen="full-width" />
+			</h:panelGrid>
+		</b:form>
+	</b:container>
+</h:body>
+</html>
